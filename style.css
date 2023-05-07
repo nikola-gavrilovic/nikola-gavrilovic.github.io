@@ -1,0 +1,563 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_div{
+    height: 250px;
+    background-color: #24527A;
+    position: relative;
+    padding-top: 100px;
+}
+
+.nav_div .logo{
+    width: 220px;
+    position: absolute;
+    left: 5vw;
+    top: 0;
+}
+
+.nav_div .burgerMeni{
+    width: 40px;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+    .nav_div{
+        width: 100%;
+    }
+    .services_div{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+
+#burg{
+    display: none;
+}
+
+.nav_div nav{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.nav_div nav::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav_div .logo{
+        width: 100px;
+        left: 0px;
+    }
+    .nav_div{
+        height: 100px;
+    }
+    .nav_div nav{
+        width: 100%;
+        height: 0px;
+        right: 0px;
+        overflow: hidden;
+        transition: all 1s;
+    }
+    .nav_div .burgerMeni{
+        display: block;
+    }
+    #burg:checked + nav{
+        height: 250px;
+        transition: all 1s;
+    }
+    .nav_div nav a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 100%;
+        text-align: left;
+        background-color: #24527A;
+        font-size: 32px;
+    }
+}
+
+.nav_div a{
+    display: block;
+    float: left;
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1.6vw;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_div a{
+        padding: 0.5rem;
+    }
+}
+
+.services_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #153243;
+    gap: 2rem;
+}
+
+.services_div h1{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.services_div p{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main_content{
+    width: 1110px;
+    min-height: 700px;
+    margin: 100px auto;
+}
+
+.main_content::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.main_content aside{
+    width: 300px;
+    height: 700px;
+    float: left;
+}
+
+.main_content aside img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.main_content main{
+    height: 700px;
+    width: 810px;
+    float: left;
+}
+
+.main_content main::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.main_content main div{
+    width: 350px;
+    height: 325px;
+    background-color: #FF9F1C;
+    float: left;
+    margin: 0 0 50px 55px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 20px;
+}
+
+.main_content main div h1{
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.main_content main div ul{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+
+.main_content main div article{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_content main div article h2{
+    color: white;
+}
+
+.main_content main div article button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(./images/strelica.png);
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+@media only screen and (max-width: 768px){
+    .main_content{
+        width: 100%;
+        min-height: 1420px;
+        background-image: url(./images/MainServer.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main_content main{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main_content main div{
+        margin: 5% 0 50px 5%;
+        width: 90%;
+        height: 300px;
+        position: relative;
+    }
+
+    .main_content aside{
+        display: none;
+    }
+}
+
+
+
+.paragraph_domen_div{
+    display: flex;
+    flex-direction: column;
+    background-color: #153243;
+    color: white;
+    width: 1110px;
+    font-size: 25px;
+    padding: 32px;
+    margin: 0 auto;
+    margin-top: 8rem;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .paragraph_domen_div{
+        width: 100%;
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+.oznake_cene{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.paragraph_domen_div .pretrazi_domen{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pretrazi_domen #pretrazivanje_domena{
+    background-color: #D9D9D9;
+    font-size: 20px;
+}
+
+.pretrazi_domen #pretrazi_dugme{
+    background-color: #A4031F;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 3.5rem;
+    width: 10rem;
+}
+
+.prelazite_paragraph{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1110px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    .prelazite_paragraph{
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+
+.prelazite_paragraph p{
+    color: #153243;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container{
+    margin-top: 100px;
+    min-height: 200px;
+    width: 100%;
+    background-color: #153243;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    width: 58vw;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer div{
+        padding: 10px;
+    }
+
+    .footer div p{
+        font-size: 12px;
+    }
+
+}
+
+
+.footer div{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+.footer div:first-child{
+    align-items: flex-start;
+}
+.footer div:last-child{
+    align-items: flex-end;
+}
+.footer div:nth-child(2){
+    align-items: center;
+}
+
+.footer p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+    .main_content{
+        width: 58vw;
+        min-height: 700px;
+        background-image: url(./images/MainServer.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .main_content main{
+        width: 58vw;
+        padding: 25px;
+        margin: 0 auto;
+    }
+    .main_content main div{
+        height: 40%;
+        width: 40%;
+        margin: 20px;
+    }
+    .main_content aside{
+        display: none;
+    }
+    .paragraph_domen_div{
+        width: 58vw;
+    }
+    .prelazite_paragraph{
+        width: 58vw;
+    }
+    .nav_div .logo{
+        left: 0;
+    }
+}
+
+/* Deo za web_hosting  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.najkvalitetniji_hosting{
+    background-color: #153243;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 74vw;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.najkvalitetniji_hosting li{
+    word-wrap: break-word;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.paketi_div{
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paketi_div p{
+    color: black;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.content_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+}
+
+
+.paket_item{
+    background-color: #FF9F1C;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .content_div{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .paket_item{
+        width: 80vw;
+        height: 350px;
+        margin: 4vh;
+        overflow: hidden;
+    }
+}
+
+.paket_item .paket_naslov p{
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paket_item .paket_specs{
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .paket_specs{
+        margin-top: 1vh;
+    }
+}
+
+.objasnjenje_paragraph{
+    margin-top: 8rem;
+    background-color: #153243;
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .objasnjenje_paragraph{
+        min-height: 24vh;
+    }
+}
+
+.objasnjenje_paragraph .objasnjenje_tekst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw;
+    padding: 10px;
+}
+
+.objasnjenje_tekst p{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.image-baze{
+    width: 55%;
+    height: 26vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 8rem;
+}
+
+.image-baze img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .image-baze{
+        width: 100%;
+    }
+}
+
